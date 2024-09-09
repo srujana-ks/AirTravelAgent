@@ -1,0 +1,7 @@
+jupyterlab
+python-dotenv
+langchain-community
+amadeus
+numexpr
+ipywidgets
+gradio
