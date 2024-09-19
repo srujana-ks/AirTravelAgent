@@ -6,7 +6,7 @@ This section of AIPC Samples showcases how to deploy local LLM agents using the 
 ### Table of Contents
 1. Installing Prerequisites
 2. Setting up LlamaCPP-python GPU backend
-3. Deploying an Air Travel Agent on AIPC [Link]
+3. Deploying an Air Travel Agent on AIPC (https://github.com/srujana-ks/AirTravelAgent/blob/master/Air_Travel_Agent.ipynb)
 
 ## Installing Prerequisites
 The following software are to be installed prior to the setting up of Llamacpp-python SYCL backend
@@ -14,32 +14,34 @@ The following software are to be installed prior to the setting up of Llamacpp-p
 2. CMake
 3. Microsoft Visual Studio 2022 community version 
 4. Microsoft Visual Studio Code  
-5. oneAPI Basekit for windows 
-6. Miniconda for windows
+5. OneAPI Basekit for Windows 
+6. Miniconda for Windows
 
 
 ### 1. GPU Drivers installation
-•	Download and Install the GPU driver from Intel® Arc™ & Iris® Xe Graphics - Windows* [[link](https://www.intel.com/content/www/us/en/download/785597/intel-arc-iris-xe-graphics-windows.html)]
-•	(Optional) Download and Install the NPU driver from https://www.intel.com/content/www/us/en/download/794734/intel-npu-driver-windows.html
-•	For NPU, if the Neural processor is not available, Check the PCI device to update the driver. Follow this document NPU_Win_Release_Notes_v2540.pdf (intel.com) https://downloadmirror.intel.com/825735/NPU_Win_Release_Notes_v2540.pdf
+-	Download and Install the GPU driver from Intel® Arc™ & Iris® Xe Graphics - Windows* [[link](https://www.intel.com/content/www/us/en/download/785597/intel-arc-iris-xe-graphics-windows.html)]
+- (Optional) Download and Install the NPU driver from https://www.intel.com/content/www/us/en/download/794734/intel-npu-driver-windows.html
+- For NPU, if the Neural processor is not available, Check the PCI device to update the driver.
+  Follow this document NPU_Win_Release_Notes_v2540.pdf (intel.com) https://downloadmirror.intel.com/825735/NPU_Win_Release_Notes_v2540.pdf\
 
-Important: Reboot the system after the installation
+**IMPORTANT:** Reboot the system after the installation
 
 ### 2. Install CMake for windows 
 Download the latest CMake for Windows from here [https://cmake.org/download/]
 
 ### 3. Microsoft Visual Studio 2022 community version 
-Download VS 2022 community from here https://visualstudio.microsoft.com/downloads/
-![alt text](image.png)
+Download VS 2022 community from here https://visualstudio.microsoft.com/downloads/  
+\
+**IMPORTANT:** Please select "Desktop Development with C++" option while installing Visual studio
 
 ### 4. Microsoft Visual Studio Code  
 Download from here https://code.visualstudio.com/Download
 
-### 5. oneAPI Basekit for windows 
+### 5. OneAPI Basekit for Windows 
 Download from here https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=windows&windows-install-type=offline
 
-### 6. Miniconda for windows
-https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe
+### 6. Miniconda for Windows
+Download and install Miniconda from here https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe
 
 
 
@@ -47,21 +49,21 @@ https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Win
 
 Open a new terminal and perform the following steps:
 
-1. Setup oneAPI environment
-   @call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 –force
-2. Create and activate the conda environment
-   conda create -n gpu_llmsycl python=3.11
-   conda activate gpu_llmsycl
-3. Set the environment variables
-   - set CMAKE_GENERATOR=Ninja
-   - set CMAKE_C_COMPILER=cl
-   - set CMAKE_CXX_COMPILER=icx
-   - set CXX=icx
-   - set CC=cl
-   - set CMAKE_ARGS="-DGGML_SYCL=ON -DGGML_SYCL_F16=ON -DCMAKE_CXX_COMPILER=icx -DCMAKE_C_COMPILER=cl"
-4. Install Llamacpp-Python bindings
-   - pip install llama-cpp-python -U --force --no-cache-dir –verbose
-5. Setting up the jupyter lab and other pip packages
-   - pip install -r requirements.txt   
+1. Setup oneAPI environment\
+   `@call "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 –force`
+2. Create and activate the conda environment\
+   `conda create -n gpu_llmsycl python=3.11`\
+   `conda activate gpu_llmsycl`
+3. Set the environment variables\
+    `set CMAKE_GENERATOR=Ninja`\
+    `set CMAKE_C_COMPILER=cl`\
+    `set CMAKE_CXX_COMPILER=icx`\
+    `set CXX=icx`\
+    `set CC=cl`\
+    `set CMAKE_ARGS="-DGGML_SYCL=ON -DGGML_SYCL_F16=ON -DCMAKE_CXX_COMPILER=icx -DCMAKE_C_COMPILER=cl"`
+4. Install Llamacpp-Python bindings\
+    `pip install llama-cpp-python -U --force --no-cache-dir –verbose`
+5. Setting up the jupyter lab and other pip packages\
+    `pip install -r requirements.txt`   
 6. Download and copy the models under /models folder
-7. Create and copy the SERP secret keys in .env file
+7. Create and Copy the SERP secret keys in .env file
