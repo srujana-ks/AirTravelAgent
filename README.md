@@ -26,19 +26,19 @@ The following software are to be installed prior to the setting up of Llamacpp-p
 
 **IMPORTANT:** Reboot the system after the installation
 
-### 2. Install CMake for windows 
-Download the latest CMake for Windows from [here](https://cmake.org/download/)
+### 2. CMake for windows 
+Download and install the latest CMake for Windows from [here](https://cmake.org/download/)
 
 ### 3. Microsoft Visual Studio 2022 community version 
-Download VS 2022 community from [here](https://visualstudio.microsoft.com/downloads/)  
+Download and install VS 2022 community from [here](https://visualstudio.microsoft.com/downloads/)  
 \
 **IMPORTANT:** Please select "Desktop Development with C++" option while installing Visual studio
 
 ### 4. Microsoft Visual Studio Code  
-Download from [here](https://code.visualstudio.com/Download)
+Download and install Microsoft Visual Studio Code from [here](https://code.visualstudio.com/Download)
 
 ### 5. OneAPI Basekit for Windows 
-Download from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=windows&windows-install-type=offline)
+Download and install OneAPI Basekit for Windows from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=windows&windows-install-type=offline)
 
 ### 6. Miniconda for Windows
 Download and install Miniconda from [here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe)
@@ -66,8 +66,7 @@ Open a new terminal and perform the following steps:
 5. Setting up the jupyter lab and other pip packages\
     `pip install -r requirements.txt`   
 6. Download and copy the models under /models folder
-7. Create and Copy the [SERP API](https://serpapi.com/) secret keys in .env file\
-   
+7. Create and Copy the [SERP API](https://serpapi.com/) secret keys in .env file   
 
 ## Sample execution on the AIPC GPU
 - Sanity check [To be added - Sample to ensure that model is loaded on the GPU]
