@@ -6,7 +6,7 @@ This section of AIPC Samples showcases how to deploy local LLM agents using the 
 ### Table of Contents
 1. Installing Prerequisites
 2. Setting up LlamaCPP-python GPU backend
-3. Deploying an Air Travel Agent on AIPC (https://github.com/srujana-ks/AirTravelAgent/blob/master/Air_Travel_Agent.ipynb)
+3. Sample execution on the AIPC GPU
 
 ## Installing Prerequisites
 The following software are to be installed prior to the setting up of Llamacpp-python SYCL backend
@@ -67,3 +67,7 @@ Open a new terminal and perform the following steps:
     `pip install -r requirements.txt`   
 6. Download and copy the models under /models folder
 7. Create and Copy the SERP secret keys in .env file
+
+## Sample execution on the AIPC GPU
+(https://github.com/srujana-ks/AirTravelAgent/blob/master/Air_Travel_Agent.ipynb)
+
