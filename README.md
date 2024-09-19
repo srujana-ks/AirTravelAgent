@@ -66,7 +66,8 @@ Open a new terminal and perform the following steps:
 5. Setting up the jupyter lab and other pip packages\
     `pip install -r requirements.txt`   
 6. Download and copy the models under /models folder
-7. Create and Copy the SERP secret keys in .env file
+7. Create and Copy the SERP secret keys in .env file\
+   https://serpapi.com/
 
 ## Sample execution on the AIPC GPU
 (https://github.com/srujana-ks/AirTravelAgent/blob/master/Air_Travel_Agent.ipynb)
